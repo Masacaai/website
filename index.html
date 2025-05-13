@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Aaqel Shaik</title>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaqel Shaik</title>
+
+  <!-- Load theme dynamically BEFORE anything else -->
+  <script src="js/load-theme.js" defer></script>
+
+  <!-- Base layout/style that uses the theme variables -->
+  <link rel="stylesheet" href="css/base.css" />
+
+  <!-- Optional font preload (Fira Code, Helvetica) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-  <h1>Welcome to my site</h1>
-  <p>This is just the beginning.</p>
+  <div id="header-container"></div>
+  <main>
+    <h1>Hello, I’m Aaqel 👋</h1>
+    <p>Welcome to my handcrafted digital garden.</p>
+  </main>
+  <script src="/js/load-header.js" defer></script> 
 </body>
 </html>

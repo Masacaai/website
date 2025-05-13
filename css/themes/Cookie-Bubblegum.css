@@ -1,0 +1,17 @@
+:root {
+  --bg-color: #fdffec;
+  --fg-color: #6c2813;
+  --accent-color: #c66102;
+  --muted-color: #8b949e;
+  --link-color: #c66102;
+  --font-family: 'Georgia', serif;
+} 
+
+.darkmode{
+  --bg-color: #020013;
+  --fg-color: #93D7EC;
+  --accent-color: #FE14A9;
+  --muted-color: #8b949e;
+  --link-color: #FE14A9;
+  --font-family: 'Courier New', monospace;
+}
