@@ -3,6 +3,20 @@ fetch("/components/header.html")
   .then(html => {
     document.getElementById("header-container").innerHTML = html;
 
+    // Dynamically inject header.css
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/css/components/header.css";
+    document.head.appendChild(link);
+
+    const path = window.location.pathname;
+
+    document.querySelectorAll(".topnav a").forEach(link => {
+      if (path.startsWith(link.getAttribute("href"))) {
+        link.classList.add("active");
+      }
+    });
+
     const themeToggle = document.getElementById('theme-toggle');
 
     const enableDarkmode = () => {

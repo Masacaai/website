@@ -1,0 +1,38 @@
+.about-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+  
+.about-grid {
+    display: grid;
+    grid-template-columns: auto 1fr ;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.section-box {
+    border: 5px solid var(--fg-color);
+    padding: 1rem;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    margin: 0.25rem;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tinted-photo {
+    width: 200px;
+    height: auto;
+    fill: var(--fg-color);
+}
+
+ body.darkmode .tinted-photo {
+    fill: var(--bg-color);
+    background-color: var(--fg-color);
+ } 
+  

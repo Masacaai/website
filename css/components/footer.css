@@ -1,0 +1,19 @@
+.footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.bottomnav {
+    display: flex;
+    gap: 2rem;
+}
+
+.bottomnav a svg:hover {
+    transform: scale(1.2);
+}
+
+.bottomnav a svg{
+    fill: var(--accent-color);
+}
