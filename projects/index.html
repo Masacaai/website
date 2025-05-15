@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaqel Shaik</title>
+
+  <!-- Load theme dynamically BEFORE anything else -->
+  <script src="/js/load-theme.js" defer></script>
+
+  <!-- Base layout/style that uses the theme variables -->
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/project.css" />
+  <!-- Optional font preload (Fira Code, Helvetica) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="header-container"></div>
+  <main>
+    <div class="projects-page">
+      <div class="projects-grid">
+        <div class="project-card tall" onclick="toggleProject(this)">
+          <div class="project-media">
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
+          </div>
+          <div class="project-description hidden">
+            <h3>Project A</h3>
+            <p>A physics-based particle simulator with interactive mouse controls.</p>
+          </div>
+        </div>
+        <div class="project-card" onclick="toggleProject(this)">
+          <div class="project-media">
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
+          </div>
+          <div class="project-description hidden">
+            <h3>Project B</h3>
+            <p>A physics-based particle simulator with interactive mouse controls.</p>
+          </div>
+        </div>
+        <div class="project-card wide" onclick="toggleProject(this)">
+          <div class="project-media">
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
+          </div>
+          <div class="project-description hidden">
+            <h3>Project C</h3>
+            <p>A physics-based particle simulator with interactive mouse controls.</p>
+          </div>
+        </div>
+        <div class="project-card wide" onclick="toggleProject(this)">
+          <div class="project-media">
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
+          </div>
+          <div class="project-description hidden">
+            <h3>Project D</h3>
+            <p>A physics-based particle simulator with interactive mouse controls.</p>
+          </div>
+        </div>
+        <div class="project-card tall" onclick="toggleProject(this)">
+          <div class="project-media">
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
+          </div>
+          <div class="project-description hidden">
+            <h3>Project E</h3>
+            <p>A physics-based particle simulator with interactive mouse controls.</p>
+          </div>
+        </div>
+        <div class="project-card wide" onclick="toggleProject(this)">
+          <div class="project-media">
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
+          </div>
+          <div class="project-description hidden">
+            <h3>Project F</h3>
+            <p>A physics-based particle simulator with interactive mouse controls.</p>
+          </div>
+        </div>
+        <div class="project-card" onclick="toggleProject(this)">
+          <div class="project-media">
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
+          </div>
+          <div class="project-description hidden">
+            <h3>Project G</h3>
+            <p>A physics-based particle simulator with interactive mouse controls.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-container"></div>
+  <script src="/js/load-header.js" defer></script> 
+  <script src="/js/load-footer.js" defer></script> 
+  <script>
+    function toggleProject(card) {
+      const media = card.querySelector('.project-media');
+      const desc = card.querySelector('.project-description');
+  
+      const isMediaVisible = !media.classList.contains('hidden');
+  
+      media.classList.toggle('hidden', isMediaVisible);
+      desc.classList.toggle('hidden', !isMediaVisible);
+    }
+  </script>  
+</body>
+</html>

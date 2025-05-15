@@ -1,7 +1,6 @@
 fetch("/components/footer.html")
   .then(res => res.text())
   .then(html => {
-    console.log("Fetched footer:", html); // 👈 Log output
     document.getElementById("footer-container").innerHTML = html;
 
     // Dynamically inject footer.css
@@ -10,3 +9,7 @@ fetch("/components/footer.html")
     link.href = "/css/components/footer.css";
     document.head.appendChild(link);
   })
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("ready");
+});

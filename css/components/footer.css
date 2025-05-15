@@ -7,13 +7,14 @@
   
 .bottomnav {
     display: flex;
-    gap: 2rem;
-}
-
-.bottomnav a svg:hover {
-    transform: scale(1.2);
+    gap: 1rem;
 }
 
 .bottomnav a svg{
     fill: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.bottomnav a svg:hover {
+    transform: scale(1.2);
 }

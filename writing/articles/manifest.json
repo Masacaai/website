@@ -1,0 +1,6 @@
+[
+    { "title": "First Post", "file": "first-post.md", "date": "2024-12-01"},
+    { "title": "Another Post", "file": "another-post.md", "date": "2025-01-10" },
+    { "title": "Last One", "file": "last-one.md", "date": "2025-05-14" }
+  ]
+  

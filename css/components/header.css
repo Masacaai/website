@@ -51,14 +51,15 @@
     right: 20px;
 }
 
-#theme-toggle svg:hover {
-    transform: scale(1.2);
-}
-
 #theme-toggle svg{
     fill: var(--accent-color);
     height: 40px;
     width: 40px;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle svg:hover {
+    transform: scale(1.2);
 }
 
 #theme-toggle svg:last-child{
