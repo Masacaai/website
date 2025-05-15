@@ -3,12 +3,6 @@ fetch("/components/header.html")
   .then(html => {
     document.getElementById("header-container").innerHTML = html;
 
-    // Dynamically inject header.css
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "/css/components/header.css";
-    document.head.appendChild(link);
-
     const path = window.location.pathname;
     let currentLink = null;
     document.querySelectorAll(".topnav a").forEach(link => {
