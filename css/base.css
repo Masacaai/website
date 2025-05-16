@@ -10,6 +10,21 @@ body {
     opacity: 1;
   }
   
+   p.spaced {
+    line-height: 1.8;
+  }
+
+  .darkmode p.spaced {
+    line-height: 1.5;
+  }
+
+  ul.spaced {
+    line-height: 1.5;
+  }
+
+  .darkmode ul.spaced {
+    line-height: 1.3;
+  }
   a {
     color: var(--link-color);
     text-decoration: none;
