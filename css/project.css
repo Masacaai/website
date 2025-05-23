@@ -38,8 +38,13 @@
 
 .project-media,
 .project-description {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  transition: opacity 0.2s ease;
+
 }
 
 .project-media img {
@@ -59,6 +64,17 @@
   color: var(--fg-color);
   text-align: center;
   border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.project-card:hover .project-media {
+  opacity: 0;
+}
+
+.project-card:hover .project-description {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .hidden {

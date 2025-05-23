@@ -34,54 +34,54 @@
   <main>
     <div class="projects-page">
       <div class="projects-grid">
-        <div class="project-card tall" onclick="toggleProject(this)">
+        <div class="project-card tall" data-url = "/projects/GENIUS.html" onclick="toggleProject(this)">
           <div class="project-media">
             <img src="/assets/projects/gaia.gif" alt="Project A in action" />
           </div>
-          <div class="project-description hidden">
+          <div class="project-description">
             <h3>Gaia</h3>
             <p>A physics-based particle simulator with interactive mouse controls.</p>
           </div>
         </div>
-        <div class="project-card" onclick="toggleProject(this)">
+        <div class="project-card" data-url = "/projects/minesweeper.html" onclick="toggleProject(this)">
           <div class="project-media">
             <img src="/assets/projects/minesweeper.gif" alt="Project A in action" />
           </div>
-          <div class="project-description hidden">
+          <div class="project-description">
             <h3>Minesweeper AI</h3>
             <p>A physics-based particle simulator with interactive mouse controls.</p>
           </div>
         </div>
-        <div class="project-card wide" onclick="toggleProject(this)">
+        <div class="project-card wide" data-url = "/projects/sage.html" onclick="toggleProject(this)">
           <div class="project-media">
             <img src="/assets/projects/sage-ped.gif" alt="Project A in action" />
           </div>
-          <div class="project-description hidden">
+          <div class="project-description">
             <h3>Sage Edu Node</h3>
             <p>A physics-based particle simulator with interactive mouse controls.</p>
           </div>
         </div>
-        <div class="project-card wide" onclick="toggleProject(this)">
+        <div class="project-card wide" data-url = "/projects/snake.html" onclick="toggleProject(this)">
           <div class="project-media">
             <img src="/assets/projects/snake.gif" alt="Project A in action" />
           </div>
-          <div class="project-description hidden">
+          <div class="project-description">
             <h3>Snake Game</h3>
             <p>A physics-based particle simulator with interactive mouse controls.</p>
           </div>
         </div>
-        <div class="project-card tall" onclick="toggleProject(this)">
+        <div class="project-card tall" data-url = "https://www.youtube.com/watch?v=0xCeAu2TSdM" onclick="toggleProject(this)">
           <div class="project-media">
             <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
           </div>
-          <div class="project-description hidden">
+          <div class="project-description">
             <h3>Bongo Cat</h3>
             <p>No project here, I just wanted bongo cat on my website.</p>
           </div>
         </div>
         <div class="project-card wide hidden" onclick="toggleProject(this)">
           <div class="project-media">
-            <img src="/assets/projects/construction.gif" alt="Project A in action" />
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
           </div>
           <div class="project-description hidden">
             <h3>Coming Soon</h3>
@@ -90,7 +90,7 @@
         </div>
         <div class="project-card hidden" onclick="toggleProject(this)">
           <div class="project-media">
-            <img src="/assets/projects/construction.gif" alt="Project A in action" />
+            <img src="/assets/projects/bongo-cat-drum.gif" alt="Project A in action" />
           </div>
           <div class="project-description hidden">
             <h3>Coming Soon</h3>
@@ -131,15 +131,12 @@
   </footer>
   <script src="/js/dynamic.js" defer></script> 
   <script>
-    function toggleProject(card) {
-      const media = card.querySelector('.project-media');
-      const desc = card.querySelector('.project-description');
-  
-      const isMediaVisible = !media.classList.contains('hidden');
-  
-      media.classList.toggle('hidden', isMediaVisible);
-      desc.classList.toggle('hidden', !isMediaVisible);
-    }
-  </script>  
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', e => {
+        const url = card.getAttribute('data-url');
+        if (url) window.location.href = url;
+      });
+    });
+  </script>    
 </body>
 </html>
